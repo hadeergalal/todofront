@@ -1,0 +1,39 @@
+ 
+<p>hhhh</p>
+<section class="my-4 container" >
+    <form [formGroup]= "todoform" (ngSubmit)="addTodo()">
+       
+        <!-- [<div class="mb-3">
+            <input formControlName="todoType" class="form-control" placeholder="your todo todotype">
+            <div *ngIf="todoType?.invalid" class="alert alert-danger">
+                <p *ngIf="todoType?.errors?.required">  todotype is required</p>
+            </div>
+        </div>] -->
+
+        <div class="mb-3">
+            <input formControlName="content" class="form-control" placeholder=" enter your todo">
+            <div *ngIf="content?.invalid" class="alert alert-danger">
+                <p *ngIf="content?.errors?.required">  todo content  required</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input formControlName="category" class="form-control" placeholder=" enter category">
+            <div *ngIf="category?.invalid" class="alert alert-danger">
+                <p *ngIf="category?.errors?.required">  category required</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input formControlName="date" class="form-control" placeholder=" enter todo date">
+            <div *ngIf="date?.invalid" class="alert alert-danger">
+                <p *ngIf="date?.errors?.required">  date  required</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="mb-3">
+            <button class="btn btn-success">add todo</button>
+            </div>
+    </form>
+</section>

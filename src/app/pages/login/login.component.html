@@ -1,0 +1,54 @@
+<!-- <section class="text-center container my-4">
+    <div class="row d-flex justify-content-center my-4 alert alert-primary" *ngIf='msg!=""'>
+        {{this.msg}}
+<form  class=" border border-3 border-primary p-5 col-9" [formGroup]="loginForm" (ngSubmit)=login()>
+    <div class="mb-3">
+        
+    <input formControlName="email" class="form-control"  placeholder="email">
+    <div *ngIf="email?.invalid" class="alert alert-danger">
+        <p *ngIf="email?.errors?.required">email is required</p>
+        <p *ngIf="email?.errors?.email">email invalid formate</p>
+
+    </div>
+   </div>
+   <div class="mb-3">
+    <input formControlName="password" class="form-control" type="password" placeholder="password" >
+    <div *ngIf="password?.invalid" class="alert alert-danger">
+        <p *ngIf="password?.errors?.required">password is required</p>
+        <p *ngIf="password?.errors?.minLength">password is min lenght is 4</p>
+        <p *ngIf="password?.errors?.maxLength">password is maxLength is 10</p>
+
+   </div>
+   <div class="mb-3">
+    <button>login</button>
+</div>
+</div>
+</form>
+</div>
+</section> -->
+<section class="my-4 container" >
+    <div class="alert alert-primary" *ngIf='msg!=""'>
+        {{this.msg}}
+    </div>
+    <form [formGroup]= "loginForm" (ngSubmit)="login()">
+       
+        <div class="mb-3">
+            <input formControlName="email" class="form-control" placeholder="your email">
+            <div *ngIf="email?.invalid" class="alert alert-danger">
+                <p *ngIf="email?.errors?.required"> email is required</p>
+                <p *ngIf="email?.errors?.email"> email invalid format</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input formControlName="password" class="form-control" placeholder="your passwor" type="password">
+            <div *ngIf="password?.invalid" class="alert alert-danger">
+                <p *ngIf="password?.errors?.required"> password is required</p>
+                <p *ngIf="password?.errors?.minLength"> password minmum length is 3</p>
+                <p *ngIf="password?.errors?.max Length"> password maximum length is 20</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">login</button>
+            </div>
+    </form>
+</section>
